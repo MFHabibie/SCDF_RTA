@@ -11,7 +11,6 @@ public class DetachingController : MonoBehaviour {
     public GameObject[] glass3;
     public GameObject door1, door2, middle;
 
-	// Use this for initialization
 	void Start () {
 
         glass2durability = 5;
