@@ -94,7 +94,7 @@ public class DetachingController : MonoBehaviour {
         door2.SetActive(false);
         //StartCoroutine("MiddleDetach");
     }
-    IEnumerator MiddleDetach()
+    public IEnumerator MiddleDetach()
     {
         yield return new WaitForSeconds(1f);
         LeanTween.moveLocalX(middle, 1.66f, 2f);
