@@ -19,7 +19,7 @@ public class _BreakerControl : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Glass")
+        if (collision.gameObject.tag == "Glass")
         {
             Debug.Log("Hit");
             glass.Play(true);

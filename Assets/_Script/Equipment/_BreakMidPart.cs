@@ -31,6 +31,7 @@ public class _BreakMidPart : MonoBehaviour {
             if(count > 5f)
             {
                 //breaking
+                _UIManager.instance.clawHint[0].SetActive(false);
                 breaks++;
             }
         }
@@ -40,6 +41,7 @@ public class _BreakMidPart : MonoBehaviour {
             if (count > 5f)
             {
                 //breaking
+                _UIManager.instance.clawHint[1].SetActive(false);
                 breaks++;
             }
         }

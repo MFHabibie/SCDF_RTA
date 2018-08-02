@@ -33,41 +33,49 @@ public class bladeTrigger : MonoBehaviour {
         {
             door1 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[3].SetActive(false);
         }
         if (col.name == "Door2")
         {
             door2 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[2].SetActive(false);
         }
         if (col.name == "Door3")
         {
             door3 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[0].SetActive(false);
         }
         if (col.name == "Door4")
         {
             door4 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[1].SetActive(false);
         }
         if (col.name == "Door5")
         {
             door5 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[4].SetActive(false);
         }
         if (col.name == "Door6")
         {
             door6 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[5].SetActive(false);
         }
         if (col.name == "Door7")
         {
             door7 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[6].SetActive(false);
         }
         if (col.name == "Door8")
         {
             door8 = 1;
             col.enabled = false;
+            _UIManager.instance.doorHint[7].SetActive(false);
         }
     }
 }

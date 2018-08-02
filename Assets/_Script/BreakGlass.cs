@@ -32,8 +32,10 @@ public class BreakGlass : MonoBehaviour {
                         glass[2].SetActive(true);
                     }
                     else if (glass[2].activeSelf)
+                    {
                         glass[2].SetActive(false);
-
+                        _UIManager.instance.glassHint[0].SetActive(false);
+                    }
                     glassDurability = 3;
                 }
             }
@@ -58,8 +60,11 @@ public class BreakGlass : MonoBehaviour {
                         glass[3].SetActive(true);
                     }
                     else if (glass[3].activeSelf)
+                    {
                         glass[3].SetActive(false);
-
+                        _UIManager.instance.glassHint[1].SetActive(false);
+                        _GameManager.instance.CuttingDoor();
+                    }
                     glassDurability = 3;
                 }
             }

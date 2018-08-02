@@ -30,7 +30,7 @@ public class _CutterControl : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Cube")
+        if(collision.gameObject.tag == "Door")
         {
             Debug.Log("Hit");
             spark.Play(true);
@@ -42,7 +42,7 @@ public class _CutterControl : MonoBehaviour {
 
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.name == "Cube")
+        if (collision.gameObject.tag == "Door")
         {
             Ray ray = Camera.main.ScreenPointToRay(fwd);
             RaycastHit hit = new RaycastHit();
@@ -56,7 +56,7 @@ public class _CutterControl : MonoBehaviour {
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "Cube")
+        if (collision.gameObject.tag == "Door")
         {
             gameObject.GetComponent<AudioSource>().clip = sawIdle;
             gameObject.GetComponent<AudioSource>().Play();

@@ -11,6 +11,8 @@ public class DetachingController : MonoBehaviour {
     public GameObject[] glass3;
     public GameObject door1, door2, middle;
 
+    int doorbreak = 0;
+
 	void Start () {
 
         glass2durability = 5;
@@ -20,7 +22,11 @@ public class DetachingController : MonoBehaviour {
 
     void Update()
     {
-        
+        if(doorbreak == 2)
+        {
+            _GameManager.instance.BreakingMiddlePart();
+            doorbreak = 0;
+        }
     }
 
     public void OnTriggerEnter(Collider col)
@@ -84,6 +90,8 @@ public class DetachingController : MonoBehaviour {
         LeanTween.moveLocalX(door1, 1.398f, 2f);
         yield return new WaitForSeconds(3f);
         door1.SetActive(false);
+        doorbreak++;
+
         //StartCoroutine("Door2Detach");
     }
     public IEnumerator Door2Detach()
@@ -92,6 +100,8 @@ public class DetachingController : MonoBehaviour {
         LeanTween.moveLocalX(door2, 1.604f, 2f);
         yield return new WaitForSeconds(3f);
         door2.SetActive(false);
+        doorbreak++;
+
         //StartCoroutine("MiddleDetach");
     }
     public IEnumerator MiddleDetach()
